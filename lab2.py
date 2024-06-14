@@ -36,13 +36,20 @@ def main():
     # TODO: Step 7 - Function that prints movie genres
     def print_movie_genres(about_me):
         genres = [movie['genre'] for movie in about_me['movies']]
-        print(f"I like to watch {genres[0]}, {genres[1]}, {genres[2]} movies.")  # Fix index error
+        print(f"I like to watch {genres[0]}, {genres[1]}, {genres[2]} movies.")
+        
+    # Fix index error
+ 
 
+    def print_movie_titles(about_me):
+        titles = [movie['title'].title() for movie in about_me['movies']]
+        print(f"Some of my favourite movies are {', '.join(titles)}!")
     # Call the functions
     print_student_name_and_id(about_me)
     add_pizza_toppings(about_me, ['MUSHROOM', 'SAUSAGE'])
     print_pizza_toppings(about_me)
     print_movie_genres(about_me)
+    print_movie_titles(about_me)
 
 
 if __name__ == '__main__':
